@@ -15,15 +15,6 @@ public class KafkaConsumerService {
 
     private final MatchingService matchingService;
 
-//    @KafkaListener(
-//            topics = "matching", groupId = "order-consumer-group1"
-//    )
-//    public void consumer(MatchingRequestDto request) {
-//        log.info("Listen :: order : {}", request.toString());
-//        matchingService.add(request);
-////        matchingService.matching(request);
-//    }
-
     @KafkaListener(
             topics = "matching", groupId = "order-consumer-group1"
     )
