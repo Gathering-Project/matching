@@ -30,8 +30,8 @@ server:
     6060
 
 spring:
-#  kafka:
-#    bootstrap-servers: "localhost:19092,localhost:19093,localhost:19094"
+  #  kafka:
+  #    bootstrap-servers: "localhost:19092,localhost:19093,localhost:19094"
   kafka:
     bootstrap-servers: "kafka1:9092,kafka2:9093,kafka3:9094"
 
@@ -57,7 +57,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/matching?serverTimezone=Asia/Seoul
-#    url: jdbc:mysql://mysql_container:3306/matching?serverTimezone=Asia/Seoul
+    #    url: jdbc:mysql://mysql_container:3306/matching?serverTimezone=Asia/Seoul
     #    username: ${MYSQL_NAME}
     #    password: ${MYSQL_PASSWORD}
     username: root

@@ -95,9 +95,8 @@ public class KafkaConfig {
         myConfig.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         myConfig.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class); // MatchingRequestDto의 역직렬화를 위한 JsonDeserializer 추가
         myConfig.put(JsonDeserializer.TRUSTED_PACKAGES, "*"); // 모든 패키지 신뢰 (또는 특정 패키지 명시)
-//        return new DefaultKafkaConsumerFactory<>(myConfig);
         return new DefaultKafkaConsumerFactory<>(myConfig, new StringDeserializer(), new JsonDeserializer<>(Object.class));
-//        return new DefaultKafkaConsumerFactory<>(myConfig);
+
     }
 
     @Bean

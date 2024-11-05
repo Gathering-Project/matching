@@ -16,7 +16,8 @@ public class KafkaConsumerService {
     private final MatchingService matchingService;
 
     @KafkaListener(
-            topics = "matching", groupId = "order-consumer-group1"
+//            topics = "matching", groupId = "order-consumer-group1"
+            topics = "matching", groupId = "matching_group"
     )
     public void consumer(ConsumerRecord<String, Object> record) {
         Object request = record.value(); // 메시지의 값만 추출
